@@ -51,10 +51,18 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    @media (max-width: map-get($breakpoints, lg)) {
+        flex-direction: column;
+    }
+    > * {
+        width: 100%;
+        @media (min-width: map-get($breakpoints, lg)) {
+            flex-basis: 50%;
+            width: 50%;
+        }
+    }
     .box__col {
         position: relative;
-        width: 50%;
-        flex-basis: 50%;
     }
 }
 
@@ -113,6 +121,7 @@ body {
                 visibility: hidden;
                 transition: 0.25s;
                 transition-delay: 0.25s;
+                z-index: 2;
                 .opt {
                     padding: 0.35rem 1rem;
                     border-radius: 0.25rem;
