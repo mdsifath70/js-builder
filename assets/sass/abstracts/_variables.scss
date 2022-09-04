@@ -1,0 +1,25 @@
+// Grid Breakpoints
+$breakpoints: (
+    xs2: 350px,
+    xs: 450px,
+    xsm2: 400px,
+    xsm: 480px,
+    sm: 576px,
+    md: 768px,
+    md2: 900px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1320px,
+    xxxl: 1400px,
+);
+
+// fonts
+$font: 'Roboto Mono', monospace;
+$font-2: 'Fira Code', monospace;
+
+// colors
+$body-bg: #fafafa;
+$body-clr: #12042e;
+$white: #fff;
+$primary: #4b0aff;
+$code-bg: #122033;

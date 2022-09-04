@@ -1,0 +1,22 @@
+// layouts
+.container {
+    padding: 0 1rem;
+    margin: 0 auto;
+    @media (min-width: map-get($breakpoints, md)) {
+        max-width: 90%;
+    }
+}
+
+.sec__space-t {
+    margin-top: 4rem;
+}
+
+label[for] {
+    cursor: pointer;
+}
+
+// titles
+.sec__title {
+    font-size: 3rem;
+    margin-bottom: 0.85rem;
+}

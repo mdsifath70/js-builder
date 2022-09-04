@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Orviko, a software company." />
+    <meta name="keywords" content="Orviko, javascript builder" />
+    <meta name="author" content="Orviko" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- web title -->
+    <title>JavaScript Builder || Orviko</title>
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
+
+    <!-- ALL CSS FILE LINK -->
+    <!-- main file -->
+    <link rel="stylesheet" href="./assets/css/style.min.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!--================== Header =================-->
+    <header class="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="./assets/img/logo.png" alt="Logo" />
+                </div>
+                <ul class="menus">
+                    <li><a href="javascript:void(0)" class="active">builder</a></li>
+                </ul>
+            </nav>
+        </div> <!-- /.container -->
+    </header> <!-- /.header -->
+
+    <!--========================= main =========================-->
+    <main id="main">
+        <section class="builder__sec sec__space-t">
+            <div class="container">
+                <div class="builder__container">
+                    <div class="box__col">
+                        <div class="builder__box">
+                            <h1 class="sec__title">Javascript Builder</h1>
+                            <div class="form__wrapper">
+                                <h2 class="title">Trigger</h2>
+                                <div class="form__box">
+                                    <div class="f__type">On</div>
+                                    <div class="select__wrapper">
+                                        <div class="select__view">
+                                            <span class="txt">Click</span>
+                                            <span class="icon">
+                                                <svg width="100%" height="100%" viewBox="0 0 17 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 2.15274L8.5 8.15274L16 2.15274" stroke="currentColor"
+                                                        stroke-width="3" stroke-miterlimit="10"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="select__opts">
+                                            <div class="opt" data-value="click">Click</div>
+                                            <div class="opt" data-value="mouseup">mouse up</div>
+                                            <div class="opt" data-value="mousedown">mouse down</div>
+                                            <div class="opt" data-value="dblclick">double click</div>
+                                            <div class="opt" data-value="load">page load</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box__col">
+                        <div class="builder__box">
+                            <div class="current__view" id="currentView">
+                                <div class="count__bar"></div>
+                                <div class="code__viewer">
+                                    <pre class="code__view"><code contenteditable="true"></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /.container -->
+        </section>
+    </main> <!-- /#main -->
+
+    <!-- JS file -->
+    <script src="./assets/js/script.js" async></script>
+</body>
+
+</html>

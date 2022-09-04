@@ -1,0 +1,186 @@
+@import './abstracts/reset';
+@import './abstracts/typography';
+@import './abstracts/variables';
+
+// base
+*,
+::before,
+::after {
+    font-family: $font;
+}
+
+body {
+    background-color: $body-bg;
+    color: $body-clr;
+}
+
+// reusable
+@import './partials/reusables';
+
+// header
+.header {
+    position: relative;
+    background-color: $white;
+    box-shadow: 0px 8px 14px rgba(149, 157, 165, 0.1);
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            display: inline-flex;
+        }
+        .menus {
+            display: flex;
+            align-items: center;
+            li {
+                a {
+                    position: relative;
+                    padding: 0.25rem 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+// builder section
+.builder__sec {
+    position: relative;
+}
+
+.builder__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    .box__col {
+        position: relative;
+        width: 50%;
+        flex-basis: 50%;
+    }
+}
+
+.builder__box {
+    position: relative;
+}
+
+.form__wrapper {
+    position: relative;
+    .title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .form__box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .f__type {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .select__wrapper {
+            position: relative;
+            text-transform: lowercase;
+            .select__view {
+                background-color: $primary;
+                color: $white;
+                padding: 0.35rem 1rem;
+                border-radius: 0.25rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                cursor: pointer;
+                .icon {
+                    width: 0.75rem;
+                    height: 0.75rem;
+                    transition: 0.25s;
+                    transition-delay: 0.25s;
+                }
+            }
+            &:hover .select__view .icon {
+                transition-delay: 0s;
+                transform: rotate(180deg);
+            }
+            .select__opts {
+                width: max-content;
+                background-color: $white;
+                box-shadow: 0px 8px 14px rgba(149, 157, 165, 0.1);
+                transform: translateY(2rem);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.25s;
+                transition-delay: 0.25s;
+                .opt {
+                    padding: 0.35rem 1rem;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+            &:hover .select__opts {
+                transition-delay: 0s;
+                transform: translateY(1rem);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.current__view {
+    &,
+    * {
+        font-family: $font-2;
+    }
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    background-color: $code-bg;
+    color: $white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        height: 0.3rem;
+        background-color: #e0e0ff;
+        border-radius: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($primary, 50%);
+        border-radius: 0.5rem;
+    }
+    .count__bar {
+        display: grid;
+        .count {
+            color: #7c7c7c;
+        }
+    }
+    code {
+        display: inline-block;
+        outline: none;
+        .ope {
+            color: #ff79c6;
+        }
+        .sl {
+            color: #c4a2ff;
+        }
+        .sin {
+            color: #f1fa8c;
+        }
+        .join {
+            color: #ff79c6;
+        }
+        .que {
+            color: #54d570;
+        }
+        .brt {
+            color: #87c9ee;
+        }
+    }
+}
